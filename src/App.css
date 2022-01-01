@@ -1,38 +1,246 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
 .App {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: #39445a;
+  color: white;
   text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 30px;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: white;
+  box-shadow: 1px 0px 5px black;
+  z-index: 100;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #39445a;
+}
+.footer {
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  position: fixed;
+  background-color: #39445a;
+  margin: 0 auto;
+  box-shadow: 1px 2px 5px black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.footer div {
+  font-size: 25px;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 1px 2px 3px black;
+  padding: 3px;
+  width: 50%;
+  cursor: pointer;
+}
+
+.footer div:hover {
+  opacity: 0.8;
+  box-shadow: olivedrab;
+  cursor: pointer;
+  font-size: 35px;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@media (max-width: 300px) and (max-width: 700px) {
+  .footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0;
+    width: 80%;
+  }
+  .footer div {
+    font-size: 25px;
+    padding: 2px;
+    font-weight: medium;
+  }
+}
+/* 
+@media (max-width: 300px) {
+  .footer div {
+    font-size: 20px;
+  }
+} */
+
+.app {
+  padding-top: 130px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+@media (min-width: 500px) {
+  .app {
+    padding-top: 60px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 700px) {
+  .app {
+    padding-top: 70px;
+  }
+}
+.dateandtype {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+.main_single {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 5px;
+  margin: 5px 0;
+  position: relative;
+  background-color: #282c43;
+  border-radius: 10px;
+}
+
+@media (min-width: 300px) and (max-width: 700) {
+  .main_single {
+    width: 100%;
+    background-color: red;
+    border: 2px solid red;
+  }
+}
+
+.under_main {
+  padding: 4px;
+}
+.under_main_title {
+  text-align: center;
   color: white;
+  font-size: 20px;
+}
+.dateandtype div {
+  padding: 5px 0;
+}
+.flexclass {
+  width: 100%;
+  border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.mainhello {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 2%;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 400px) {
+  .mainhello {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (min-width: 300px) and (max-width: 700) {
+  .mainhello {
+    width: 100%;
+    flex-direction: column;
   }
 }
+.rating {
+  position: relative;
+  color: white;
+  width: 15%;
+  bottom: 92%;
+  border: 2px solid red;
+  left: 85%;
+  border-color: black;
+  background-color: #282c43;
+  border-radius: 100px;
+}
+
+.pagination {
+  padding-bottom: 1%;
+}
+
+.page {
+  width: 60%;
+  margin: 0 auto;
+}
+@media (min-width: 500px) {
+  .page {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .page {
+    width: 70%;
+  }
+}
+
+.genre {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+.genre h1 {
+  margin: 15px 15px;
+  padding: 3px 4px;
+  width: auto;
+  background-color: #282c43;
+  border-radius: 100px;
+  color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+  transition: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.genre h1:hover {
+  font-size: 25px;
+  opacity: 0.8;
+  box-shadow: olivedrab;
+}
+
+.genre h1:active {
+  font-size: 25px;
+  opacity: 0.8;
+  box-shadow: olivedrab;
+}
+.myplaceholder {
+  background-color: #282c43;
+}
+.myplaceholder:active {
+  background-color: #282c43;
+}
+.myplaceholder::placeholder{
+  font-size: 25px;
+  font-weight: bold;
+}
+
